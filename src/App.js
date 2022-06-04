@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+/*
+应用根组件
+*/
+import React, { Component, Fragment } from 'react'
+// 引入路由
+import { Route, Routes,Navigate} from 'react-router-dom';
+import Login from './pages/login';
+import Admin from './pages/admin';
+import Test from './pages/test'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+    render() {
+        return (
+            <Fragment>
+                <Routes>
+                    <Route path='/login' element={<Login />}></Route>
+                    <Route path='/*' element={<Admin />}></Route>
+                    <Route path='/test' element={<Test />} ></Route>
+                    <Route path="/" element={<Navigate to="/home"/>} />
+                </Routes>
+            </Fragment>
+        )
+
+    }
 }
-
-export default App;

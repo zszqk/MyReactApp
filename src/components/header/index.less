@@ -1,0 +1,49 @@
+.header{
+    height: 80px;
+    background-color: white;
+    .header-top{
+        height: 40px;
+        line-height: 40px;
+        text-align: right;
+        border-bottom: 1px solid #1DA57A;
+        padding-right: 10px;
+        span{
+            padding-right: 5px;
+        }
+        button{
+            color: #1DA57A;
+        }
+    }
+    .header-bottom{
+        display: flex;
+        align-items: center;
+        .header-bottom-left{
+            width: 25%;
+            line-height: 40px;
+            text-align: center;
+            font-size: large;
+            position: relative;
+            // 伪元素制作倒三角制作
+            &::after{
+                content: ' ';
+                position: absolute;
+                top: 100%;
+                right: 50%;
+                transform: translateX(50%);
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-top: 20px solid white;
+            }
+        }
+        .header-bottom-right{
+            width: 75%;
+            line-height: 40px;
+            text-align: center;
+            text-align: right;
+            span{
+                margin-right: 15px;
+            }
+        }
+    }
+}

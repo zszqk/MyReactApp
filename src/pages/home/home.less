@@ -1,0 +1,52 @@
+.home-content {
+  width: 100%;
+  height: 100%;
+  .home-content-title{
+    h1 {
+      font-size: 30px;
+      text-align: center;
+      animation: h1_color 3s ease alternate infinite;
+    }
+  }
+  .home-content-img{
+    position: relative;
+    img {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      animation: img_move 5s alternate infinite;
+    }
+  }
+
+  
+
+}
+
+@keyframes img_move {
+  0% {
+    left: 0%;
+    top: 30px;
+    margin-left: 0;
+  }
+
+  25% {
+    left:50%;
+    top: 30px;
+    margin-left: -100px;
+  }
+  75% {
+    left:50%;
+    top: 200px;
+    margin-left: -100px;
+  }
+  100% {
+    left:100%;
+    top: 200px;
+    margin-left: -200px;
+  }
+  
+}
+@keyframes h1_color {
+  from{ color: black;}
+  to{color: aliceblue;}
+}
